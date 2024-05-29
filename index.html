@@ -1,88 +1,78 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women's Vacation Rentals</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AI Certs Event</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Vacation Rentals for Women</h1>
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="city.html">Cities</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="login.html" id="login">Login</a></li>
-                    <li><a href="signup.html" id="signup">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h2>Find Your Perfect Vacation Rental</h2>
-            <form id="search-form">
-                <input type="text" id="citySearch" placeholder="Search for a city...">
-                <button onclick="searchCity()">Search</button>
-                
-            </form>
-        </div>
-    </section>
-
-    <section class="destinations">
-        <div class="container">
-            <h2>Featured Indian Destinations</h2>
-            <div class="properties">
-                <div class="property">
-                    <img src="https://source.unsplash.com/400x300/?mumbai" alt="Mumbai Property">
-                    <h3>Mumbai Room Rental</h3>
-                    <p>Stay in a cozy and secure rented room in the heart of Mumbai. Perfect for solo female travelers. Starting from ₹2000/night.</p>
-                </div>
-                <div class="property">
-                    <img src="https://source.unsplash.com/400x300/?delhi" alt="Delhi Property">
-                    <h3>Delhi Shared Accommodation</h3>
-                    <p>Experience the comfort and safety of shared accommodation in Delhi. Female-only dormitories available. Starting from ₹1500/night.</p>
-                </div>
-                <div class="property">
-                    <img src="https://source.unsplash.com/400x300/?goa" alt="Goa Property">
-                    <h3>Goa Women's Hostel</h3>
-                    <p>Stay in a women's hostel in Goa, offering private rooms and shared spaces. Safe and welcoming environment. Starting from ₹1800/night.</p>
-                </div>
+    <div class="container">
+        <div class="logo">
+            <img src="Logo.png" alt="AICERTS Logo">
+           
+          </div>
+     
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="event.html">Event details</a></li>
+        
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="button">Get Certified</button>
+    </div>
+    
+    <main>
+        <section id="hero">
+            <h1>Welcome to AI Certs Event</h1>
+            <p>Join us for a day of learning and networking</p>
+        </section>
+        <section id="event-details">
+            <h2>Event Details</h2>
+            <p>Date: December 31, 2024</p>
+            <div id="countdown">Countdown: <span></span></div>
+        </section>
+        <section id="schedule">
+            <h2>Schedule of Events</h2>
+            <button class="collapsible">Event 1</button>
+            <div class="content">
+                <p>Cybersecurity Conferences in 2024 – 2025</p>
+                <p>Our cybersecurity conference directory is meticulously updated and checked manually to prevent spam, ensuring it remains the community’s premier resource for discovering top cybersecurity conferences, events, meetings, and seminars for 2024, 2025, and beyond. This carefully curated list caters to chief information security officers (CISOs), cybersecurity leaders, technology executives, and anyone passionate about the field.</p>
             </div>
-            
-            <div class="properties">
-                <div class="property">
-                    <img src="https://source.unsplash.com/400x300/?kolkata" alt="Kolkata Property">
-                    <h3>Kolkata Homestay</h3>
-                    <p>Experience authentic Indian hospitality in a women-friendly homestay in Kolkata. Comfortable and secure rooms. Starting from ₹2200/night.</p>
-                </div>
-                <div class="property">
-                    <img src="https://source.unsplash.com/400x300/?jaipur" alt="Jaipur Property">
-                    <h3>Jaipur Guest House</h3>
-                    <p>Stay in a traditional guest house in Jaipur, offering a safe and serene environment for female travelers. Starting from ₹1800/night.</p>
-                </div>
-                <div class="property">
-                    <img src="https://source.unsplash.com/400x300/?udaipur" alt="Udaipur Property">
-                    <h3>Udaipur Retreat</h3>
-                    <p>Escape to a tranquil retreat in Udaipur, offering exclusive accommodation for women. Enjoy privacy and security. Starting from ₹2500/night.</p>
-                </div>
+            <button class="collapsible">Event 2</button>
+            <div class="content">
+                <p>
+                    Live Hacking Events</p>
+                    <p>A live hacking event is an on-site bug bounty challenge, where ethical hackers and customer teams can meet for a few days over a Red vs Blue team setup. Hunters who uncover valid vulnerabilities get a reward, based on the criticality and rules of the event.</p>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Women's Vacation Rentals. All rights reserved.</p>
-            <p>Designed with women's safety and comfort in mind.</p>
-        </div>
+        </section>
+        <section id="speakers">
+            <h2>Speakers</h2>
+            <div class="tab">
+                <button class="tab-button" data-target="speaker1">Speaker 1</button>
+                <button class="tab-button" data-target="speaker2">Speaker 2</button>
+            </div>
+            <div id="speaker1" class="tab-content">
+                <h3>Jacob Riggs</h3>
+                <p>*Former Security Specialist for Guardian News & Media.</p>
+                <p> *Former Penetration Tester for Guardian News & Media.</p>
+                    <p>*Former Cyber Security Analyst for Charityshare Ltd.</p>
+                    <p> *Former Security Analyst for John Lewis & Partner.</p>
+                    <img src="https://cyber-security-speakers.com/wp-content/uploads/2023/01/Jacob-Riggs.jpg.webp" height="200px" width="300px" alt="">
+            </div>
+            <div id="speaker2" class="tab-content">
+                <h3>James Lyne</h3>
+                <p>*CEO of Helical Levity</p>
+                <p> *Former Global Head of Security Research for Sophos</p>
+                <p>* Former Technologist & Competition Writer for Cyber Security Challenge UK</p>
+                <img src="https://cyber-security-speakers.com/wp-content/uploads/2023/01/James-Lyne.jpg" height="200px" width="300px"alt="">
+            </div>
+        </section>
+    </main>
+    <footer id="contact">
+        <p>Contact us at info@aicerts.com</p>
+        <p>Follow us on social media</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

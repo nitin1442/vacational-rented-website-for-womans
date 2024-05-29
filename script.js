@@ -1,30 +1,43 @@
-document.getElementById("citySearch").addEventListener("keydown", function(event) {
-    // Check if the pressed key is the "Enter" key (key code 13)
-    if (event.keyCode === 13) {
-        // Prevent default behavior of the "Enter" key (submitting the form)
-        event.preventDefault();
-        // Call the searchCity function to perform the search
-        searchCity();
+document.addEventListener('DOMContentLoaded', () => {
+    const countdownElement = document.querySelector('#countdown span');
+    const eventDate = new Date('2024-12-31T00:00:00');
+
+    function updateCountdown() {
+        const now = new Date();
+        const timeDifference = eventDate - now;
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    document.querySelectorAll('.collapsible').forEach(button => {
+        button.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+            document.querySelector(`#${this.dataset.target}`).style.display = 'block';
+
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Set default tab
+    document.querySelector('.tab-button').click();
 });
-
-function searchCity() {
-    var cityName = document.getElementById("citySearch").value.trim().toLowerCase();
-
-    // List of available cities and their corresponding URLs
-    var cities = {
-        "goa": "goa.html",
-        "delhi": "delhi.html",
-        "mumbai": "mumbai.html",
-        "jaipur": "jaipur.html"
-    };
-
-    // Check if the searched city is available in the list of cities
-    if (cityName in cities) {
-        // City found, redirect to the corresponding city page
-        window.location.href = cities[cityName];
-    } else {
-        // City not found, display error message
-        alert("Sorry, the city you searched for is not available.");
-    }
-}

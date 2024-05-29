@@ -1,0 +1,127 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(image\ 45.png);
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+   
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+   margin-right: 50px;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    margin-right: 20px;
+    margin-left: 25px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button {
+    background-color: #f0c040; /* Gold color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 25px;
+  }
+#hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 5em 0;
+    text-align: center;
+}
+#event-details, #schedule, #speakers {
+    color: red;
+    padding: 2em;
+    text-align: center;
+}
+footer {
+    background-color: #123456;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+}
+#countdown {
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+.collapsible {
+    background-color: #abcdef;
+    color: #123456;
+    cursor: pointer;
+    padding: 1em;
+    border: none;
+    text-align: left;
+    outline: none;
+    width: 100%;
+}
+.content {
+    display: none;
+    padding: 0 1em;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+.tab {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+.tab-button {
+    background-color: #abcdef;
+    color: #123456;
+    cursor: pointer;
+    padding: 1em;
+    border: none;
+    outline: none;
+}
+.tab-content {
+    display: none;
+    padding: 1em;
+    border-top: 1px solid #123456;
+}
+.tab-button.active, .collapsible.active {
+    background-color: #123456;
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .tab {
+        flex-direction: column;
+    }
+}
